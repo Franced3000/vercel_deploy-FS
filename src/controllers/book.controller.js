@@ -26,11 +26,6 @@ const scriviBookSulFile = async (data) => {
 //FUNZIONI API 
 const findAll = async (req, res) => {
 
-fs.readdir(process.cwd()).then( (err, files) => {
-  files.forEach(file => {
-    console.log(file);
-  });
-});
   const data = await leggiBookDalFile();
   res.status(200).json(data);
 };
